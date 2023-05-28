@@ -1,0 +1,37 @@
+{
+    "name": "ariaNg-electron",
+    "version": "4.0.0",
+    "private": true,
+    "description": "AriaNg electron",
+    "main": "app.js",
+    "author": "SKDushow",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Xpsoted/aria-electron"
+    },
+    "homepage": "https://xpsoted.github.io/",
+    "bugs": {
+        "url": "https://github.com/Xpsoted/aria-electron/issues"
+    },
+    "scripts": {
+        "dev": "electron . dev",
+        "start": "electron .",
+        "install": "cd native_node_modules && npm install",
+        "build-win32": "sh ./packager.sh win32 ia32",
+        "build-win64": "sh ./packager.sh win32 x64",
+        "build-darwin64": "sh ./packager.sh darwin x64 #只能在*unix系统上运行此打包脚本",
+        "build-linux64": "sh ./packager.sh linux x64",
+        "build-linuxarm": "sh ./packager.sh linux armv7l",
+        "release": "npm version minor",
+        "release-patch": "npm version patch"
+    },
+    "peerDependencies": {
+        "electron": "^7.1.1"
+    },
+    "devDependencies": {
+        "electron": "^24.4.0",
+        "electron-installer-zip": "^0.1.2",
+        "electron-packager": "^14.1.0"
+    },
+    "license": "MIT"
+}
