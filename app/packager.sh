@@ -9,31 +9,31 @@ fi
 ignore_platform=$(node -e "console.log(['linux','darwin','win32'].filter(x=>x!='${platform}').join('|'))")
 ignore_arch=$(node -e "console.log(['x64','ia32','arm64','armv7l'].filter(x=>x!='${arch}').join('|'))")
 
-electron-packager . AriaNgGUI --app-copyright="Copyright (c) 2018-2020 Xmader" \
+electron-packager . AriaNgElectron --app-copyright="Copyright (c) 2018-2023 Xpsoted" \
     --platform=${platform} --arch=${arch} --electron-version 7.1.1 \
     --out ../OutApp/ --overwrite \
     --icon=./assets/AriaNg.ico --ignore=packager.sh --ignore="aria2\/(${ignore_platform})" --ignore="aria2\/${platform}/(${ignore_arch})" --ignore="^\/node_modules" \
     --tmpdir=../OutApp/Temp/ --download.cache=../OutApp/Temp/
 
-cd ../OutApp/AriaNgGUI-${platform}-${arch}
+cd ../OutApp/AriaNgElectron-${platform}-${arch}
 rm LICENSE LICENSES.chromium.html version
 cp ../../README.md ./
 cp ../../LICENSE ./
 
 cd ../ # 在OutApp文件夹
-cd "AriaNgGUI-${platform}-${arch}"
+cd "AriaNgElectron-${platform}-${arch}"
 
 if [ ${platform} = "darwin" ]
 then
     rm -rf Electron.dSYM
-    electron-installer-zip AriaNgGUI.app ../../dist/AriaNgGUI-${platform}-${arch}.zip
+    electron-installer-zip AriaNgElectron.app ../../dist/AriaNgElectron-${platform}-${arch}.zip
 elif [ ${platform} = "linux" ]
 then
-    electron-installer-zip AriaNgGUI-${platform}-${arch} ../../dist/AriaNgGUI-${platform}-${arch}.zip
+    electron-installer-zip AriaNgElectron-${platform}-${arch} ../../dist/AriaNgElectron-${platform}-${arch}.zip
 else
-    electron-installer-zip . ../../dist/AriaNgGUI-${platform}-${arch}.zip
+    electron-installer-zip . ../../dist/AriaNgElectron-${platform}-${arch}.zip
 fi
 
-# rm -rf AriaNgGUI-${platform}-${arch}
+# rm -rf AriaNgElectron-${platform}-${arch}
 
-# rm ../dist/AriaNgGUI-${platform}-${arch}.zip
+# rm ../dist/AriaNgElectron-${platform}-${arch}.zip

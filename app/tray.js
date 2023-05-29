@@ -1,10 +1,10 @@
 /*!
  * AriaNg GUI
  * 
- * Copyright (c) 2018-2020 Xmader
+ * Copyright (c) 2018-2023 Xpsoted
  * Released under the MIT license
  * 
- * Source Code: https://github.com/Xmader/aria-ng-gui
+ * Source Code: https://github.com/Xpsoted/ariaNg-electron
  * 
 */
 
@@ -102,9 +102,9 @@ const destroyTray = () => {
     }
 
     // cross-platform workaround
-    // issues: Xmader/aria-ng-gui#20 Xmader/aria-ng-gui#22 Xmader/aria-ng-gui#24
+    // issues: Xpsoted/ariaNg-electron#20 Xpsoted/ariaNg-electron#22 Xpsoted/ariaNg-electron#24
     mainWindow.once("show", () => {
-        // 暂时绕过 Xmader/aria-ng-gui#24
+        // 暂时绕过 Xpsoted/ariaNg-electron#24
         // 临时的 workaround for KDE and GNOME, 直到找到更好的解决办法
         // 在 Linux 上显示窗口后不移除托盘图标
         if (process.platform != "linux") {

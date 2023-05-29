@@ -1,10 +1,10 @@
 /*!
  * AriaNg GUI
  * 
- * Copyright (c) 2018-2020 Xmader
+ * Copyright (c) 2018-2023 Xpsoted
  * Released under the MIT license
  * 
- * Source Code: https://github.com/Xmader/aria-ng-gui
+ * Source Code: https://github.com/Xpsoted/ariaNg-electron
  * 
  * show-path.js - 打开已下载文件的保存位置 / 在文件管理器中显示文件
  */

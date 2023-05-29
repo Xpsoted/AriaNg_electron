@@ -1,13 +1,13 @@
 /*!
  * AriaNg GUI
  * 
- * Copyright (c) 2018-2020 Xmader
+ * Copyright (c) 2018-2023 Xpsoted
  * Released under the MIT license
  * 
- * Source Code: https://github.com/Xmader/aria-ng-gui
+ * Source Code: https://github.com/Xpsoted/ariaNg-electron
  * 
  * power-save-blocker.js - 在有任务正在下载时阻止系统休眠，但允许屏幕关闭
- * https://github.com/Xmader/aria-ng-gui/issues/34
+ * https://github.com/Xpsoted/ariaNg-electron/issues/34
  */
 
 // @ts-check

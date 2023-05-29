@@ -27,7 +27,7 @@ const notify = (title, message) => {
             title,
             message,
             icon,
-            // appID:"github.xmader.ariang_gui"
+            // appID:"github.Xpsoted.ariang_gui"
         }, (err) => {
             if (err)
                 console.error(err)

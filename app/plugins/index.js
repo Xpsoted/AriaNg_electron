@@ -1,16 +1,16 @@
 /*!
  * AriaNg GUI
  * 
- * Copyright (c) 2018-2020 Xmader
+ * Copyright (c) 2018-2023 Xpsoted
  * Released under the MIT license
  * 
- * Source Code: https://github.com/Xmader/aria-ng-gui
+ * Source Code: https://github.com/Xpsoted/ariaNg-electron
  */
 
 // @ts-check
 
 /**
- * @typedef {import("../native_node_modules/node_modules/aria-ng-gui-plugins-core").Plugin} Plugin
+ * @typedef {import("../native_node_modules/node_modules/ariaNg-electron-plugins-core").Plugin} Plugin
  * @type {Plugin[]}
  */
 const plugins = [
